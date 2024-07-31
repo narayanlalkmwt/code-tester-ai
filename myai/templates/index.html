@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Tester AI</title>
+    <link rel="icon" href="/static/img/logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+
+    <!-- I have to work on Login and Signup process Later on.... -->
+    <header class="top-nav">
+        <div class="logo">
+            <img src="/static/img/logo.webp" alt="Logo" class="logo-img">
+        </div>
+        <nav class="nav-buttons">
+            <a href="{% url 'login' %}" class="nav-btn">Login</a>
+        </nav>
+    </header>
+    <div class="content-wrapper">
+        <div class="text-content">
+            <h1>Code Tester AI</h1>
+            <p>Welcome to the Code Tester AI, where you can practice coding and learn from your mistakes.</p>
+            <p>Our AI generates personalized code challenges tailored to your skill level.</p>
+            <a href="{% url 'language' %}" class="btn">Get Started</a>
+        </div>
+        <div class="image-content"></div>
+    </div>
+
+    <div class="language-selection">
+        <h2>Programming Language</h2>
+        <ul>
+            <li>Choose Your Language</li>
+            <li>Popular Languages Supported</li>
+        </ul>
+    </div>
+
+    <div class="set-of-questions">
+        <h2>Types of Questions</h2>
+        <p>Our Code Tester AI allows you to customize your practice experience.</p>
+        <div class="triangle-container">
+            <div class="triangle">
+                <div class="level-number level1"></div>
+                <div class="level-number level2"></div>
+                <div class="level-number level3"></div>
+            </div>
+            <div class="levels">
+                <div class="level">
+                    <h3>1 Basic</h3>
+                    <p>Easy questions to get started.</p>
+                </div>
+                <div class="level">
+                    <h3><br>2 Intermediate</h3>
+                    <p>More challenging problems.</p>
+                </div>
+                <div class="level">
+                    <h3><br>3 Advanced</h3>
+                    <p>Complex questions for experts.</p>
+                </div>
+            </div>
+        </div>
+        <p class="description">This lets you tailor the difficulty to your current skill level and focus on specific areas you want to improve.</p>
+    </div>
+    
+    <div class="difficulty-level">
+        <h2>Difficulty Level</h2>
+        <div class="difficulty-container">
+            <div class="difficulty">
+                <img src="/static/img/simple.webp" alt="Beginner">
+                <h3>Beginner</h3>
+                <p>Test your basic programming knowledge with simple exercises designed for beginners. These questions focus on fundamental concepts and syntax.</p>
+            </div>
+            <div class="difficulty">
+                <img src="/static/img/intermidate.webp" alt="Intermediate">
+                <h3>Intermediate</h3>
+                <p>Challenge yourself with more complex problems that require a deeper understanding of programming logic and data structures.</p>
+            </div>
+            <div class="difficulty">
+                <img src="/static/img/complex.webp" alt="Advanced">
+                <h3>Advanced</h3>
+                <p>Put your coding skills to the ultimate test with challenging problems that require advanced algorithms and problem-solving techniques.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="generated-questions">
+        <div class="generated-text">
+            <h2>Automatically Generated Questions</h2>
+            <p>Our AI engine is designed to create unique and challenging code problems tailored to your selected programming language and difficulty level.</p>
+            <p>We use advanced algorithms to ensure that each question is relevant, engaging, and tests your understanding of key programming concepts.</p>
+        </div>
+        <div class="generated-image">
+            <img src="/static/img/server.webp" alt="Automatically Generated Questions">
+        </div>
+    </div>
+
+    <div class="user-answers">
+        <h2>User Provides Answers</h2>
+        <ul>
+            <li>Users answer the generated questions</li>
+            <li>Test their knowledge and skills</li>
+        </ul>
+    </div>
+
+    <div class="ai-test-answers">
+        <h2>AI Tests Answers</h2>
+        <ol>
+            <li>
+                <div class="step">
+                    <h3>Code Validation</h3>
+                    <p>The AI analyzes the user's code, comparing it to the correct solution.</p>
+                </div>
+            </li>
+            <li>
+                <div class="step">
+                    <h3>Syntax Check</h3>
+                    <p>The AI verifies if the code complies with the syntax rules of the chosen programming language.</p>
+                </div>
+            </li>
+            <li>
+                <div class="step">
+                    <h3>Logical Evaluation</h3>
+                    <p>The AI assesses whether the code achieves the desired output and follows the correct logic.</p>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <!-- Add the new section here -->
+    <div class="feedback-on-user-answers">
+        <h2>Feedback on User Answers</h2>
+        <p>Our AI engine provides comprehensive feedback on each answer, highlighting correct and incorrect responses.</p>
+        <p>Detailed explanations are provided for every question, giving users a clear understanding of their performance and areas for improvement.</p>
+        <p>Users can review their mistakes and learn from their errors, strengthening their coding skills and improving their understanding of the concepts tested.</p>
+    </div>
+
+    <!-- Comprehensive Testing Experience Section -->
+    <div class="comprehensive-testing-experience">
+        <h2>Comprehensive Testing Experience</h2>
+        <div class="testing-features">
+            <div class="feature">
+                <div class="feature-number">1</div>
+                <h3>Detailed Feedback</h3>
+                <p>Our AI provides detailed feedback on each answer. It checks whether the answer meets requirements accroding to questions.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-number">2</div>
+                <h3>Track Progress</h3>
+                <p>Users can track their progress over time, seeing how their coding skills improve.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-number">3</div>
+                <h3>Diverse Question Pools</h3>
+                <p>Our AI generates a vast range of questions, testing various concepts and complexities.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-number">4</div>
+                <h3>Adaptive Difficulty</h3>
+                <p>The difficulty level adapts based on user performance, ensuring a challenging yet engaging experience.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Improve Coding Skills Section -->
+    <div class="improve-coding-skills">
+        <div class="text-content">
+            <h2>Improve Coding Skills</h2>
+            <p>Mastering programming languages involves ongoing practice and refinement. By repeatedly testing your code, you can identify areas for improvement and develop a deeper understanding of concepts.</p>
+        </div>
+        <div class="image-content">
+            <img src="/static/img/coding.webp" alt="Coding Image">
+        </div>
+    </div>
+    <script>
+        // Add this script at the end of the body or in a separate JS file
+        document.addEventListener("DOMContentLoaded", function() {
+            let lastScrollTop = 0;
+            const header = document.querySelector(".top-nav");
+            const sections = document.querySelectorAll(".hidden-section");
+
+            window.addEventListener("scroll", function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    header.classList.add("hidden");
+                } else {
+                    // Scrolling up
+                    header.classList.remove("hidden");
+                }
+                lastScrollTop = scrollTop;
+
+                sections.forEach(section => {
+                    if (section.getBoundingClientRect().top < window.innerHeight * 0.75) {
+                        section.classList.add("visible-section");
+                    }
+                });
+            });
+
+            // Initial check in case the sections are already in view
+            sections.forEach(section => {
+                if (section.getBoundingClientRect().top < window.innerHeight * 0.75) {
+                    section.classList.add("visible-section");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
