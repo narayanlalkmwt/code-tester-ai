@@ -1,0 +1,5 @@
+pip install reportlab
+pip install openai==0.28
+pip install django-environ
+pip install google-generativeai
+pip install python-dotenv
