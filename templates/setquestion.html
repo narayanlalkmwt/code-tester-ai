@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE TESTER AI</title>
+    <link rel="icon" href="/static/img/logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/setquestion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Set Of Questions</h1>
+        <div id="language-selected" style="margin-bottom: 20px;"></div>
+        <div class="buttons">
+            <button class="btn" onclick="selectQuestions(1)">1</button>
+            <button class="btn" onclick="selectQuestions(2)">2</button>
+            <button class="btn" onclick="selectQuestions(3)">3</button>
+        </div>
+        <div class="nav-buttons">
+            <button class="nav-btn preview" onclick="navigatePreview()">Previous</button>
+            <button class="nav-btn next" onclick="navigateNext()">Next</button>
+        </div>
+    </div>
+    <script>
+        let selectedLanguage = null;
+        let selectedQuestions = null;
+    
+        function getQueryParams() {
+            let params = {};
+            let search = window.location.search.substring(1);
+            if (search) {
+                let pairs = search.split('&');
+                for (let i = 0; i < pairs.length; i++) {
+                    let pair = pairs[i].split('=');
+                    params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+                }
+            }
+            return params;
+        }
+    
+        window.onload = function() {
+            let params = getQueryParams();
+            if (params.language) {
+                selectedLanguage = params.language;
+                document.getElementById('language-selected').innerText = 'Selected Language: ' + selectedLanguage;
+            }
+        };
+    
+        function selectQuestions(num) {
+            selectedQuestions = num;
+            // Remove selected class from all buttons
+            document.querySelectorAll('.btn').forEach(btn => btn.classList.remove('selected'));
+            // Add selected class to the clicked button
+            document.querySelectorAll('.btn').forEach(btn => {
+                if (btn.textContent.trim() == num) {
+                    btn.classList.add('selected');
+                }
+            });
+        }
+    
+        function navigateNext() {
+            if (selectedQuestions) {
+                window.location.href = "{% url 'level' %}?language=" + selectedLanguage + "&questions=" + selectedQuestions;
+            } else {
+                alert('Please select the number of questions before proceeding.');
+            }
+        }
+    
+        function navigatePreview() {
+            window.location.href = "{% url 'language' %}?language=" + selectedLanguage;
+        }
+    </script>
+</body>
+</html>

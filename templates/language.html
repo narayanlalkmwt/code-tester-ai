@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE TESTER AI</title>
+    <link rel="icon" href="/static/img/logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/language.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Languages</h1>
+        <div class="buttons">
+            <button id="python-btn" class="btn" onclick="selectLanguage('Python')">Python</button>
+            <button id="java-btn" class="btn" onclick="selectLanguage('Java')">Java</button>
+            <button id="c-btn" class="btn" onclick="selectLanguage('c')">C</button>
+            <button id="cpp-btn" class="btn" onclick="selectLanguage('cpp')">C++</button>
+            <button id="php-btn" class="btn" onclick="selectLanguage('php')">PHP</button>
+            <button id="nodejs-btn" class="btn" onclick="selectLanguage('nodejs')">Node JS</button>
+        </div>
+        <div class="nav-buttons">
+            <button class="nav-btn next" onclick="navigateNext()">Next</button>
+        </div>
+    </div>
+    <script>
+        let selectedLanguage = null;
+
+        function selectLanguage(language) {
+            selectedLanguage = language;
+            // Remove selected class from all buttons
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => button.classList.remove('selected'));
+            // Add selected class to the clicked button
+            switch (language.toLowerCase()) {
+                case 'python':
+                    document.getElementById('python-btn').classList.add('selected');
+                    break;
+                case 'java':
+                    document.getElementById('java-btn').classList.add('selected');
+                    break;
+                case 'cpp':
+                    document.getElementById('cpp-btn').classList.add('selected');
+                    break;
+                case 'c':
+                    document.getElementById('c-btn').classList.add('selected');
+                    break;
+                case 'php':
+                    document.getElementById('php-btn').classList.add('selected');
+                    break;
+                case 'nodejs':
+                    document.getElementById('nodejs-btn').classList.add('selected');
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function navigateNext() {
+            if (selectedLanguage) {
+                window.location.href = "{% url 'setquestion' %}?language=" + selectedLanguage;
+            } else {
+                alert('Please select a language before proceeding.');
+            }
+        }
+    </script>
+</body>
+</html>

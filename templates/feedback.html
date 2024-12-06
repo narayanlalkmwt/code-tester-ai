@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="/static/css/feedback.css">
+</head>
+<body>
+    <div class="container">
+        <div class="question-section">
+            <h2>Question</h2>
+            <pre>{{ question }}</pre>
+        </div>
+        <div class="answer-section">
+            <h2>Original Answer</h2>
+            <pre>{{ original_answer }}</pre>
+        </div>
+        {% if new_answer %}
+        <div class="corrected-answer-section">
+            <h2>Corrected Answer</h2>
+            <pre>{{ new_answer }}</pre>
+        </div>
+        {% endif %}
+        <div class="feedback-section">
+            <h2>Feedback</h2>
+            <pre>{{ feedback }}</pre>
+        </div>
+    </div>
+</body>
+</html>
