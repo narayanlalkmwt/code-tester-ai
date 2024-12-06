@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 20px;
+}
+
+.question-section, .answer-section, .corrected-answer-section, .feedback-section {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #ffcc00; /* Example color, adjust as needed */
+}
+
+.question-section pre {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 15px; /* Rounded shape for question */
+    border: 2px solid #ffcc00; /* Border for question */
+    overflow: auto;
+    white-space: pre-wrap; /* Ensures long lines wrap */
+}
+
+.answer-section pre {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 25px; /* Different rounded shape for answer */
+    border: 2px solid #ff6600; /* Border for answer */
+    overflow: auto;
+    white-space: pre-wrap; /* Ensures long lines wrap */
+}
+
+.corrected-answer-section pre {
+    background-color: #555;
+    padding: 10px;
+    border-radius: 25px; /* Rounded shape for corrected answer */
+    border: 2px solid #00cc66; /* Border for corrected answer */
+    overflow: auto;
+    white-space: pre-wrap; /* Ensures long lines wrap */
+}
+
+.feedback-section pre {
+    background-color: #666;
+    padding: 10px;
+    border-radius: 25px; /* Rounded shape for feedback */
+    border: 2px solid #ff6600; /* Border for feedback */
+    overflow: auto;
+    white-space: pre-wrap; /* Ensures long lines wrap */
+}
