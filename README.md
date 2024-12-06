@@ -1,19 +1,45 @@
-pip install reportlab
-pip install openai==0.28
-pip install django-environ
-pip install google-generativeai
-pip install social-auth-app-django
-pip install python-dotenv
-pip install datasets
-pip install trainer
+# **🚀 Level Up Your Programming Skills with Code Tester AI**  
 
-OpenAI API Key
-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
+**👩‍💻 Your Intelligent Coding Companion!**  
+Code Tester AI is here to revolutionize the way you learn programming! Whether you're a beginner exploring coding fundamentals or a seasoned pro sharpening your skills, this innovative tool provides:  
+- **Tailored Coding Challenges**  
+- **Focused Learning Experiences**  
+- **Intelligent Progress Tracking**  
 
+---
 
-Gemini API Key
-AIzaSyBTNp8pj2lwbJo8-axu0C4RIp1x4BUciwY
+## **✨ Key Features**  
 
+### **🎯 Personalized Learning**  
+- Choose your **preferred programming language** (Python, JavaScript, Java, etc.).  
+- Set your **difficulty level** (Beginner, Intermediate, Advanced).  
+- Receive **custom-crafted coding challenges** tailored to your skill set and learning objectives.  
 
-Krutrim API Key
-o37s7JrfyyBMa-RxLzbLMLTl-H
+### **🤖 Intelligent Question Generation**  
+- Powered by **advanced algorithms**, ensuring every question is:  
+  - **Relevant**: Matches your current knowledge.  
+  - **Engaging**: Keeps you motivated.  
+  - **Insightful**: Tests core programming concepts thoroughly.  
+
+### **📈 Focused Improvement**  
+- Identify and **target weak areas**.  
+- Focus on **specific topics or concepts** like algorithms, data structures, or debugging.  
+- Progress faster with problems curated to meet your personal goals.  
+
+---
+
+## **💡 Why Code Tester AI?**  
+
+- **🌟 Adaptive Challenges**: Ensures growth at every stage of learning.  
+- **📚 Diverse Topics**: From simple loops to advanced system design concepts.  
+- **⏱️ Saves Time**: No need to search for relevant problems—Code Tester AI has you covered.  
+- **🎓 Learn by Doing**: Practice hands-on and develop real-world problem-solving skills.  
+
+---
+
+**Start your coding journey or level up your expertise today with Code Tester AI!**  
+Ready to test your skills? 🚀  
+
+**👉 Try it now!**  
+
+--- 
