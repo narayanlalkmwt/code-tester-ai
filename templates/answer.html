@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE TESTER AI</title>
+    <link rel="icon" href="/static/img/logo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/answer.css">
+</head>
+<body>
+    <div class="container">
+        <h3 class="question">
+            <p id="rcorners1">{{ script_output }}</p>
+        </h3>
+    
+        <div class="editor-container">
+            <div id="editor">//Write your code from here</div>
+            <div id="leave-container">
+                <!-- There is a Leave button -->
+                <div id="typing-speed">Typing Speed:<br> 0 WPM</div>
+                <div id="timer">Time:<br> 00:00</div>
+                <div id="theme-selector-container">
+                    <label for="theme-selector">Select Theme:</label>
+                    <select id="theme-selector">
+                        <option value="ace/theme/cobalt">Cobalt</option>
+                        <option value="ace/theme/monokai">Monokai</option>
+                        <option value="ace/theme/github">GitHub</option>
+                        <option value="ace/theme/solarized_dark">Solarized Dark</option>
+                        <option value="ace/theme/solarized_light">Solarized Light</option>
+                        <!-- Add more themes as needed -->
+                    </select>
+                </div>
+            </div>
+        </div>
+        <form id="next-form" action="{% url 'answer' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="language" id="hidden-language" value="{{ selected_language }}">
+            <input type="hidden" name="level" id="hidden-level" value="{{ selected_level }}">
+            <input type="hidden" name="questions" id="hidden-questions" value="{{ selected_questions }}">
+            <input type="hidden" name="question" id="hidden-question" value="{{ script_output }}">
+            <textarea name="answer" id="hidden-answer" style="display: none;"></textarea>
+            <button type="submit" class="btn-next">Next</button>
+        </form>       
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.5.3/ace.js"></script>
+    <script src="/static/js/answer.js"></script>
+    <script>
+        document.querySelector('.btn-next').addEventListener('click', function() {
+            document.getElementById('hidden-answer').value = ace.edit("editor").getValue();
+        });
+    </script>
+</body>
+</html>
